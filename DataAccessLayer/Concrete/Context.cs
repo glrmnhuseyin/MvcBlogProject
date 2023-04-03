@@ -16,6 +16,11 @@ namespace DataAccessLayer.Concrete
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Heading> Headings { get; set; }
         public DbSet<Writer> Writers { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-FJAHODS;Database=BlogDb;Trusted_Connection=True;");
+            base.OnConfiguring(optionsBuilder);
+        }
 
     }
 }

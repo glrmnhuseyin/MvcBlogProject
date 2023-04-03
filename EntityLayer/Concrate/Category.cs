@@ -19,9 +19,6 @@ namespace EntityLayer.Concrate
         public bool CategoryStatus { get; set; }
 
         public ICollection<Heading> Headings { get; set; }
-        public Category()
-        {
-            Headings= new HashSet<Heading>();
-        }
+   
     }
 }
