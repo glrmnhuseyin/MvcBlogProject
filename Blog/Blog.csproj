@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AdminLTE-3.0.4\**" />
+    <Content Remove="AdminLTE-3.0.4\**" />
+    <EmbeddedResource Remove="AdminLTE-3.0.4\**" />
+    <None Remove="AdminLTE-3.0.4\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
+    <None Include="sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
+    <None Include="sneat-1.0.0\.github\workflows\issue-staler.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
   </ItemGroup>
