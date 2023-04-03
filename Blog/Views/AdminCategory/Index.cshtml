@@ -1,4 +1,6 @@
-﻿
+﻿@using EntityLayer.Concrate
+@model List<Category>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -6,3 +8,41 @@
 
 <h1>Index</h1>
 
+<p>
+    <a asp-action="AddCategory">Yeni Kayıt</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Kategori Adı
+            </th>
+         
+
+            <th>Sil</th>
+            <th>Güncelle</th>
+            <th>Başlıklar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+
+             
+                <td><a href="#" class="btn btn-danger">Sil</a></td>
+                <td><a href="#" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
